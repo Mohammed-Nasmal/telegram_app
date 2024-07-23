@@ -78,8 +78,107 @@ class DummyDb {
       'avatarUrl':
           'https://images.pexels.com/photos/25748615/pexels-photo-25748615/free-photo-of-portrait-of-a-young-man-reading-a-newspaper-outdoors.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load'
     },
+
     {
       'name': 'John Doe',
+      'lastMessage': 'See you tomorrow!',
+      'time': '09:45 AM',
+      'avatarUrl':
+          'https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=400'
+    },
+    {
+      'name': 'Mohammed',
+      'lastMessage': 'I have to complete ',
+      'time': '08:45 AM',
+      'avatarUrl':
+          'https://images.pexels.com/photos/5102561/pexels-photo-5102561.jpeg?auto=compress&cs=tinysrgb&w=600'
+    },
+    {
+      'name': 'Afras',
+      'lastMessage': 'Any Exam Tomorrow',
+      'time': '07:45 AM',
+      'avatarUrl':
+          'https://images.pexels.com/photos/3778212/pexels-photo-3778212.jpeg?auto=compress&cs=tinysrgb&w=600'
+    },
+    {
+      'name': 'Nihal',
+      'lastMessage': 'Good Well',
+      'time': '07:35 AM',
+      'avatarUrl':
+          'https://images.pexels.com/photos/1906157/pexels-photo-1906157.jpeg?auto=compress&cs=tinysrgb&w=600'
+    },
+    {
+      'name': 'Abinav',
+      'lastMessage': 'How is your day!',
+      'time': '06:05 AM',
+      'avatarUrl':
+          'https://images.pexels.com/photos/6256894/pexels-photo-6256894.jpeg?auto=compress&cs=tinysrgb&w=400'
+    },
+    {
+      'name': 'Faris',
+      'lastMessage': 'See you Tuesday!',
+      'time': '05:45 AM',
+      'avatarUrl':
+          'https://images.pexels.com/photos/5102907/pexels-photo-5102907.jpeg?auto=compress&cs=tinysrgb&w=400'
+    },
+    {
+      'name': 'Manaf',
+      'lastMessage': 'How was your exam',
+      'time': '19:12 PM',
+      'avatarUrl':
+          'https://images.pexels.com/photos/4694307/pexels-photo-4694307.jpeg?auto=compress&cs=tinysrgb&w=400'
+    },
+    {
+      'name': 'JohnCena',
+      'lastMessage': 'See you tomorrow!',
+      'time': '09:45 AM',
+      'avatarUrl':
+          'https://images.pexels.com/photos/6271653/pexels-photo-6271653.jpeg?auto=compress&cs=tinysrgb&w=400'
+    },
+    {
+      'name': 'Sharukh',
+      'lastMessage': 'Nice car you have',
+      'time': '11:45 PM',
+      'avatarUrl':
+          'https://images.pexels.com/photos/5336915/pexels-photo-5336915.jpeg?auto=compress&cs=tinysrgb&w=400'
+    },
+    {
+      'name': 'Irfan',
+      'lastMessage': 'See you tomorrow!',
+      'time': '09:45 AM',
+      'avatarUrl':
+          'https://images.pexels.com/photos/3778899/pexels-photo-3778899.jpeg?auto=compress&cs=tinysrgb&w=400'
+    },
+    {
+      'name': 'Behanan',
+      'lastMessage': 'See you tomorrow!',
+      'time': '09:45 AM',
+      'avatarUrl':
+          'https://images.pexels.com/photos/4918155/pexels-photo-4918155.jpeg?auto=compress&cs=tinysrgb&w=400'
+    },
+    {
+      'name': 'Rahul',
+      'lastMessage': 'See you tomorrow!',
+      'time': '09:45 AM',
+      'avatarUrl':
+          'https://images.pexels.com/photos/5089184/pexels-photo-5089184.jpeg?auto=compress&cs=tinysrgb&w=400'
+    },
+    {
+      'name': 'Yaswanth',
+      'lastMessage': 'See you tomorrow!',
+      'time': '09:45 AM',
+      'avatarUrl':
+          'https://images.pexels.com/photos/1040880/pexels-photo-1040880.jpeg?auto=compress&cs=tinysrgb&w=400'
+    },
+    {
+      'name': 'Suneer',
+      'lastMessage': 'See you tomorrow!',
+      'time': '09:45 AM',
+      'avatarUrl':
+          'https://images.pexels.com/photos/8366756/pexels-photo-8366756.jpeg?auto=compress&cs=tinysrgb&w=400'
+    },
+    {
+      'name': 'John',
       'lastMessage': 'See you tomorrow!',
       'time': '09:45 AM',
       'avatarUrl':

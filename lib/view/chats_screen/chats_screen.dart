@@ -129,26 +129,26 @@ class ChatsScreen extends StatelessWidget {
         ),
       ),
       body: ListView.separated(
-        itemCount: DummyDb.chats.length,
+        itemCount: DummyDb.messages.length,
         itemBuilder: (context, index) {
+          final chat = DummyDb.messages[index];
           return ListTile(
             leading: CircleAvatar(
-              backgroundImage: AssetImage(DummyDb.chats[index]['url']!),
+              backgroundImage: NetworkImage(chat['avatarUrl']!),
             ),
             title: Text(
-              DummyDb.chats[index]['name']!,
+              chat['name']!,
               style: TextStyle(fontWeight: FontWeight.bold),
             ),
             subtitle: Text(
-              DummyDb.chats[index]['message']!,
+              chat['lastMessage']!,
               style:
                   TextStyle(fontWeight: FontWeight.normal, color: Colors.grey),
             ),
             trailing: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text(DummyDb.chats[index]['time']!),
-                // Add any trailing widgets if needed
+                Text(chat['time']!),
               ],
             ),
             onTap: () {
@@ -156,7 +156,7 @@ class ChatsScreen extends StatelessWidget {
                 context,
                 MaterialPageRoute(
                   builder: (context) => ChatsSectionScreen(
-                    chat: DummyDb.chats[index],
+                    chat: chat,
                   ),
                 ),
               );

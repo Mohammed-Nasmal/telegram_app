@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:telegram_app/dummy_db.dart';
-import 'package:telegram_app/view/info_screen/info_screen.dart';
+import 'package:telegram_app/view/info_edit_screen/info_edit_screen.dart';
 
 class ChatsSectionScreen extends StatefulWidget {
   final Map<String, String> chat;
@@ -53,13 +53,11 @@ class _ChatsSectionScreenState extends State<ChatsSectionScreen> {
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => InfoScreen()),
+                MaterialPageRoute(builder: (context) => InfoEditScreen()),
               );
             },
             icon: CircleAvatar(
-              backgroundImage: NetworkImage(
-                "https://images.pexels.com/photos/25748615/pexels-photo-25748615/free-photo-of-portrait-of-a-young-man-reading-a-newspaper-outdoors.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load",
-              ),
+              backgroundImage: NetworkImage(widget.chat['avatarUrl']!),
             ),
           ),
         ],
@@ -72,9 +70,9 @@ class _ChatsSectionScreenState extends State<ChatsSectionScreen> {
               itemBuilder: (context, index) {
                 final message = DummyDb.messagess[index];
                 return ChatBubble(
-                  isMe: message['isMe']!,
-                  text: message['text']!,
-                  time: message['time']!,
+                  isMe: message['isMe'],
+                  text: message['text'],
+                  time: message['time'],
                   imageUrl: message['imageUrl'],
                 );
               },

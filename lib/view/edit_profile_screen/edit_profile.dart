@@ -41,7 +41,7 @@ class EditProfileScreen extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text('Jacob W.', style: TextStyle(fontSize: 18)),
+                      Text('Mohammed', style: TextStyle(fontSize: 18)),
                       TextFormField(
                         decoration: InputDecoration(
                           hintText: 'Last Name',
@@ -76,7 +76,7 @@ class EditProfileScreen extends StatelessWidget {
             ),
             ListTile(
               title: Text('Username'),
-              subtitle: Text('@jacob_designer'),
+              subtitle: Text('@mohammed_designer'),
               trailing: Icon(Icons.arrow_forward_ios),
               onTap: () {
                 // Handle change username

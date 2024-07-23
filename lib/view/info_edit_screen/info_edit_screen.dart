@@ -63,7 +63,7 @@ class _InfoEditScreenState extends State<InfoEditScreen> {
             child: Column(
               children: [
                 Text(
-                  'Martha Craig',
+                  'Mohammed',
                   style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                 ),
                 Text(

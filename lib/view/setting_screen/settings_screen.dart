@@ -37,24 +37,22 @@ class UserHeader extends StatelessWidget {
       children: [
         ListTile(
           leading: CircleAvatar(
-            backgroundImage: NetworkImage(
-                'https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg?auto=compress&cs=tinysrgb&w=600'),
-          ),
-          title: Text('Jacob W.'),
+              backgroundImage: AssetImage("assets/images/p6.jpeg")),
+          title: Text('Mohammed'),
           subtitle: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text('+1 202 555 0147'),
-              Text('@jacob_d'),
+              Text('@mohammed_d'),
             ],
           ),
           trailing: Icon(Icons.arrow_forward_ios),
         ),
         ListTile(
           leading: CircleAvatar(
-            child: Text('JD'),
+            child: Text('MD'),
           ),
-          title: Text('Jacob Design'),
+          title: Text('Mohammed Design'),
         ),
         ListTile(
           leading: Icon(Icons.add),

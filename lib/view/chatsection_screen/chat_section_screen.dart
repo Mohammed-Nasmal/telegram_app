@@ -78,7 +78,7 @@ class _ChatsSectionScreenState extends State<ChatsSectionScreen> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.all(11.0),
+              padding: const EdgeInsets.all(13.0),
               child: Row(
                 children: [
                   Expanded(
@@ -92,7 +92,7 @@ class _ChatsSectionScreenState extends State<ChatsSectionScreen> {
                         ),
                         hintText: 'Message',
                         border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(100),
+                          borderRadius: BorderRadius.circular(30),
                         ),
                       ),
                     ),

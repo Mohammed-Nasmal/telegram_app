@@ -151,7 +151,7 @@ class DummyDb {
       "type": 'Outgoing, Incoming',
       "duration": '',
       "status": 'outgoing',
-      "avatarUrl": 'assets/images/p2.jpeg'
+      "avatarUrl": 'assets/images/p10.jpeg'
     },
     {
       "name": 'Karen Castillo',
@@ -159,7 +159,7 @@ class DummyDb {
       "type": 'Outgoing, Incoming',
       "duration": '',
       "status": 'outgoing',
-      "avatarUrl": 'assets/images/p2.jpeg'
+      "avatarUrl": 'assets/images/p10.jpeg'
     },
     {
       "name": 'Martin Randolph',
@@ -265,7 +265,6 @@ class DummyDb {
       "status": '',
       "avatarUrl": 'assets/images/p8.jpeg'
     },
-   
   ];
   //contact screen
 
@@ -273,17 +272,17 @@ class DummyDb {
     {
       "name": "Joshua Lawrence",
       "status": "online",
-      "avatarUrl": "assets/images/p1.jpeg"
+      "avatarUrl": "assets/images/p4.jpeg"
     },
     {
       "name": "Andrew Parker",
       "status": "online",
-      "avatarUrl": "assets/images/p2.jpeg"
+      "avatarUrl": "assets/images/p10.jpeg"
     },
     {
       "name": "Martin Randolph",
       "status": "online",
-      "avatarUrl": "assets/images/p3.jpeg"
+      "avatarUrl": "assets/images/p10.jpeg"
     },
     {
       "name": "Kieron Dotson",

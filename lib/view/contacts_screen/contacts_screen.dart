@@ -9,7 +9,7 @@ class ContactsScreen extends StatelessWidget {
         backgroundColor: Color(0xff24A1DE),
         title: Text(
           'Contacts',
-          style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+          style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
         ),
         actions: [
           IconButton(

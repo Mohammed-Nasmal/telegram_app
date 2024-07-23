@@ -6,13 +6,16 @@ class SettingsScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Color(0xff24A1DE),
-        title: Text('Settings'),
+        title: Text(
+          'Settings',
+          style: TextStyle(color: Colors.white),
+        ),
         actions: [
           TextButton(
             onPressed: () {},
             child: Text(
               'Edit',
-              style: TextStyle(color: Colors.white),
+              style: TextStyle(color: Colors.white, fontSize: 17),
             ),
           ),
         ],
@@ -34,7 +37,8 @@ class UserHeader extends StatelessWidget {
       children: [
         ListTile(
           leading: CircleAvatar(
-            backgroundImage: NetworkImage('https://via.placeholder.com/150'),
+            backgroundImage: NetworkImage(
+                'https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg?auto=compress&cs=tinysrgb&w=600'),
           ),
           title: Text('Jacob W.'),
           subtitle: Column(

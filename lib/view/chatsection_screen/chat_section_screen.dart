@@ -3,7 +3,9 @@ import 'package:telegram_app/dummy_db.dart';
 import 'package:telegram_app/view/info_screen/info_screen.dart';
 
 class ChatsSectionScreen extends StatefulWidget {
-  const ChatsSectionScreen({super.key});
+  final Map<String, String> chat;
+
+  const ChatsSectionScreen({super.key, required this.chat});
 
   @override
   State<ChatsSectionScreen> createState() => _ChatsSectionScreenState();
@@ -12,105 +14,105 @@ class ChatsSectionScreen extends StatefulWidget {
 class _ChatsSectionScreenState extends State<ChatsSectionScreen> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        backgroundColor: Color(0xffB5CADD),
-        appBar: AppBar(
-          backgroundColor: Color(0xff24A1DE),
-          title: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                "Martha Craig",
-                style: TextStyle(
-                    fontSize: 17,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white),
+    return Scaffold(
+      backgroundColor: Color(0xffB5CADD),
+      appBar: AppBar(
+        backgroundColor: Color(0xff24A1DE),
+        title: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              widget.chat['name'] ?? 'Chat',
+              style: TextStyle(
+                fontSize: 17,
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
               ),
-              Text(
-                "last seen just now",
-                style: TextStyle(
-                    fontSize: 13,
-                    fontWeight: FontWeight.normal,
-                    color: Colors.white),
-              ),
-            ],
-          ),
-          leading: IconButton(
-            icon: Icon(
-              Icons.arrow_back_ios,
-              color: Colors.white,
             ),
-            onPressed: () {
-              Navigator.pop(context);
-            },
-          ),
-          actions: [
-            IconButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => InfoScreen()),
-                );
-              },
-              icon: CircleAvatar(
-                backgroundImage: NetworkImage(
-                    "https://images.pexels.com/photos/25748615/pexels-photo-25748615/free-photo-of-portrait-of-a-young-man-reading-a-newspaper-outdoors.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load"),
+            Text(
+              "last seen just now",
+              style: TextStyle(
+                fontSize: 13,
+                fontWeight: FontWeight.normal,
+                color: Colors.white,
               ),
             ),
           ],
         ),
-        body: Column(
-          children: [
-            Expanded(
-              child: ListView.builder(
-                itemCount: DummyDb.messagess.length,
-                itemBuilder: (context, index) {
-                  final message = DummyDb.messagess[index];
-                  return ChatBubble(
-                    isMe: message['isMe']!,
-                    text: message['text']!,
-                    time: message['time']!,
-                    imageUrl: message['imageUrl'],
-                  );
-                },
+        leading: IconButton(
+          icon: Icon(
+            Icons.arrow_back_ios,
+            color: Colors.white,
+          ),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
+        actions: [
+          IconButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => InfoScreen()),
+              );
+            },
+            icon: CircleAvatar(
+              backgroundImage: NetworkImage(
+                "https://images.pexels.com/photos/25748615/pexels-photo-25748615/free-photo-of-portrait-of-a-young-man-reading-a-newspaper-outdoors.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load",
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.all(13.0),
-              child: Row(
-                children: [
-                  Expanded(
-                    child: TextField(
-                      decoration: InputDecoration(
-                        fillColor: Colors.white,
-                        filled: true,
-                        prefixIcon: Icon(
-                          Icons.attach_file_outlined,
-                          color: Color(0xff858E99),
-                        ),
-                        hintText: 'Message',
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(30),
-                        ),
+          ),
+        ],
+      ),
+      body: Column(
+        children: [
+          Expanded(
+            child: ListView.builder(
+              itemCount: DummyDb.messagess.length,
+              itemBuilder: (context, index) {
+                final message = DummyDb.messagess[index];
+                return ChatBubble(
+                  isMe: message['isMe']!,
+                  text: message['text']!,
+                  time: message['time']!,
+                  imageUrl: message['imageUrl'],
+                );
+              },
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(13.0),
+            child: Row(
+              children: [
+                Expanded(
+                  child: TextField(
+                    decoration: InputDecoration(
+                      fillColor: Colors.white,
+                      filled: true,
+                      prefixIcon: Icon(
+                        Icons.attach_file_outlined,
+                        color: Color(0xff858E99),
+                      ),
+                      hintText: 'Message',
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(30),
                       ),
                     ),
                   ),
-                  IconButton(
-                    icon: Icon(
-                      Icons.send,
-                      size: 30,
-                    ),
-                    onPressed: () {
-                      // Handle send message
-                    },
+                ),
+                IconButton(
+                  icon: Icon(
+                    Icons.send,
+                    size: 30,
                   ),
-                ],
-              ),
+                  onPressed: () {
+                    // Handle send message
+                  },
+                ),
+              ],
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

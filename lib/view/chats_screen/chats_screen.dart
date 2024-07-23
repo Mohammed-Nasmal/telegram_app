@@ -154,7 +154,11 @@ class ChatsScreen extends StatelessWidget {
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => ChatsSectionScreen()),
+                MaterialPageRoute(
+                  builder: (context) => ChatsSectionScreen(
+                    chat: DummyDb.chats[index],
+                  ),
+                ),
               );
             },
           );

@@ -15,7 +15,9 @@ class EditProfileScreen extends StatelessWidget {
         ),
         actions: [
           TextButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pop(context);
+            },
             child: Text(
               'Done',
               style: TextStyle(color: Colors.white, fontSize: 17),
